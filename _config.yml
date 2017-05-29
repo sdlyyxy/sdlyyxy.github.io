@@ -3,8 +3,8 @@ name: sdlyyxy
 email: sdlyyxy@icloud.com
 author: sdlyyxy
 url: https://sdlyyxy.github.io
-resume_site: https://sdlyyxy.github.io
-github: https://github.com/sdlyyxy/
+resume_site: https://sdlyyxy.github.io # in header “关于作者”
+github: https://github.com/sdlyyxy/ # no use in the present
 baseurl: ""
 description: 思考改变世界。
 meta_description: sdlyyxy # used in html's head , meta, description 

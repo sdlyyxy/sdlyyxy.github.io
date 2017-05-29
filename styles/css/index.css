@@ -6236,12 +6236,24 @@ hr {
 .docs-home .ad {
   margin: 0 -15px 40px !important;
 }
+@media (min-width:481px){
+  .docs-header{
+  padding: 30px 15px 50px;
+  }
+}
+@media (max-width:480px){
+  .docs-header{
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
 @media (min-width: 480px) {
   .docs-home .ad {
     width: 330px !important;
     margin: 0 auto 40px !important;
     border-radius: 4px;
   }
+
 }
 @media (min-width: 768px) {
   .docs-home .ad {
@@ -6320,14 +6332,19 @@ hr {
 }
 /* Page headers */
 .docs-header {
-  padding: 30px 15px 50px;
+  /*padding: 30px 15px 50px;*/
   /* side padding builds on .container 15px, so 30px */
   font-size: 16px;
   text-align: center;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
 }
 .docs-header h1 {
+  /*margin-bottom: 30px;*/
   color: #fff;
+}
+.docs-header h2 {
+  color: white;
+
 }
 .docs-header p {
   font-weight: 300;
@@ -6342,8 +6359,11 @@ hr {
     text-align: left;
   }
   .docs-header h1 {
-    font-size: 60px;
+    font-size: 55px;
     line-height: 1;
+  }
+  .docs-header h2{
+    font-size: 37px;
   }
 }
 @media (min-width: 992px) {
@@ -6374,7 +6394,8 @@ hr {
 }
 @media (min-width: 768px) {
   .footer {
-    text-align: left;
+    /*text-align: left;*/
+    text-align: center;
   }
   .footer p {
     margin-bottom: 0;
