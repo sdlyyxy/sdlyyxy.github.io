@@ -7,7 +7,7 @@ resume_site: https://sdlyyxy.github.io
 github: https://github.com/sdlyyxy/
 baseurl: ""
 description: 思考改变世界。
-meta_description: description 
+meta_description: sdlyyxy # used in html's head , meta, description 
 motto: 思考改变世界。
 banner: 思考改变世界。
 
