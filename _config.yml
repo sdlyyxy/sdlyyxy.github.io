@@ -13,6 +13,7 @@ banner: 思考改变世界。
 
 #permalink: /:categories/:year/:month/:day/:title/
 permalink: /:year/:month/:day/:title/
+gems: [jekyll-paginate]
 paginate: 10
 
 exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
