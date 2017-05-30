@@ -35,10 +35,10 @@ def create(tagName):
         os.makedirs('./tag/'+tagName)
     f=open('./tag/'+tagName+'/index.html','w',encoding='utf8')
     print(
-        '''--- 
-layout: default 
-title: 标签分类 
-header: Posts By Tag 
+        '''---
+layout: default
+title: Tags
+header: Posts By Tag
 ---
 
         <div class="container docs-container" id="js-to-remove">
@@ -47,7 +47,7 @@ header: Posts By Tag
 			<div class="home">
 
 				{% for tag in site.tags %}
-                {% if tag==\''''+tagName+
+                {% if tag[0] contains \''''+tagName+
     '''\'%}
 				<h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>
 				<ul>
