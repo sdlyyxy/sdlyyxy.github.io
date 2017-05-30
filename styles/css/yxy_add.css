@@ -1,0 +1,32 @@
+@media (max-width:480px){
+    .docs-header h2 {
+        color: white;
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+    .docs-header .container{
+        padding-bottom: 10px;
+    }
+}
+.post-content {
+    font-size: 16px;
+}
+.index-post-item {
+    font-size: 18px;
+    color: black;
+}
+a.yxy-link:hover,a.yxy-link:focus,a.yxy-link:active{
+    color: #0075c9;
+    text-decoration: none;
+}
+a.index-post-item:hover,a.index-post-item:focus,a.index-post-item:active{
+    color: #0075c9;
+    text-decoration: none;
+}
+.index-post-date a,.index-post-date{
+    font-size: 13px;
+    color: #c8c8c8;
+}
+.docs-header .container{
+    text-align: left;
+}

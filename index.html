@@ -45,7 +45,7 @@ layout: default
         </div>
         <div class="col-md-9" role="main">
           <div class="panel docs-content">
-            <div class="wrapper">
+            <div class="wrapper" style="padding-top:15px;">
               <div class="home">
                 {% for post in site.posts  %}
                   {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
@@ -53,19 +53,34 @@ layout: default
                   {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
                   {% capture next_month %}{{ post.previous.date | date: "%B" }}{% endcapture %}
 
-                  {% if forloop.first %}
+                  <!--{% if forloop.first %}
                     <h1 id="year_{{this_year}}">{{this_year}}</h1>
                     <h2 id="month_{{this_year}}_{{this_month}}">{{this_month}}</h2>
                     <ul>
-                  {% endif %}
+                  {% endif %}-->
 
                   <ol class="breadcrumb">
-                   <li><span>{{ post.date | date: "%B %e, %Y" }}</span> &raquo; <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+                   <li>
+                     <!--&raquo; -->
+                     <!--%B %e, -->
+                     <a class="index-post-item" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                     <br>
+                    <span class="index-post-date">
+                      <a class="yxy-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.date | date: "%Y年%m月%d日" }}</a> 
+                      /
+                      {% for cat_item in post.categories %}
+                      {{ cat_item }}
+                      {% endfor %}
+                      {% for tag_item in post.tag %}
+                      {{ tag_item }}
+                      {% endfor %}
+                    </span> 
+                    </li>
                   </ol>
                   {% if forloop.last %}
                     </ul>
                   {% else %}
-                    {% if this_year != next_year %}
+                    <!--{% if this_year != next_year %}
                       </ul>
                       <h1 id="year_{{next_year}}">{{next_year}}</h1>
                       <h2 id="month_{{next_year}}_{{next_month}}">{{next_month}}</h2>
@@ -76,7 +91,7 @@ layout: default
                         <h2 id="month_{{next_year}}_{{next_month}}">{{next_month}}</h2>
                         <ul>
                       {% endif %}
-                    {% endif %}
+                    {% endif %}-->
                   {% endif %}
                 {% endfor %}
               </div>

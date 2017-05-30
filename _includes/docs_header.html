@@ -4,7 +4,8 @@
 		
 		    <h2>{{ page.title }}</h2>
 		    {% if page.date %}
-				Posted on <span class="postdate">{{ page.date | date: "%b %d, %Y" }}</span>
+				<!--<span class="postdate">{{ page.date | date: "%b %d, %Y" }}</span>-->
+				<span class="postdate">{{ page.date | date: "%Y年%m月%d日" }}</span>
 				{% endif %}
 		<!--<h1>{{ site.motto }}</h1>-->
 		{% else %}
