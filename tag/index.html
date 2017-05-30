@@ -1,45 +1,73 @@
+--- 
+layout: default 
+title: 标签分类 
+header: Posts By Tag 
 ---
-layout: default
-title: Tags
-header: Posts By Tag
----
 
-<div class="container docs-container">
-  <div class="row">
-    <div class="col-md-3">
-      <div class="sidebar hidden-print" role="complementary">
-        <div id="navigation">
-        	<h1>目录</h1>
-      		<ul class="nav sidenav">
-			  	{% if site.tags.first[0] == null %}
-				  	{% for tag in site.tags %} 
-				  	<li><a href="{{ site.JB.tags_path }}#{{ tag }}-ref">{{ tag }} <span >({{ site.tags[tag].size }})</span></a></li>
-				  	{% endfor %}
-				{% else %}
-				  	{% for tag in site.tags %} 
-				  	<li><a href="{{ site.JB.tags_path }}#{{ tag[0] }}-ref">{{ tag[0] }} <span style="color: #999999;" >({{ tag[1].size }})</span></a></li>
-				  	{% endfor %}
-				{% endif %}
-          	</ul>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-9" role="main">
-      <div class="panel docs-content">
-        <div class="wrapper">
-          <div class="home">
+<div class="container docs-container" id="js-to-remove">
+	<div class="panel docs-content">
+		<div class="wrapper">
+			<div class="home">
 
-          	{% for tag in site.tags %} 
-			  <h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>
-			  <ul>
-			    {% assign pages_list = tag[1] %}  
-			    {% include LessOrMore/pages_list %}
-			  </ul>
-			{% endfor %}
+				{% for tag in site.tags %}
+				<h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>
+				<ul>
+					{% assign pages_list = tag[1] %} {% include LessOrMore/pages_list %}
+				</ul>
+				{% endfor %}
 
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+			</div>
+		</div>
+	</div>
+<script>
+	var dataStr = '{ {% for tag in site.tags %}{% if tag[0] != site.tags.first[0] %},{% endif %}"{{ tag[0] }}":[{% for post in tag[1] %}{% if post != tag[1].first %},{% endif %}{"url":"{{post.url}}", "title":"{{post.title}}", "date":"{{post.date | date:"%d/%m/%Y"}}"}{% endfor %}]{% endfor %} }',
+		data = JSON.parse(dataStr),
+		var curTag = $.query.get("tag"),
+		if(curTag){
+			var archieves = data[curTag];
+			var finalStr='<div class="container docs-container"><div class="panel docs-content"><div class="wrapper"><div class="home">';
+			for(var i in archieves){
+				finalStr+='<ol class="breadcrumb"><li><a href="'+archieves[i].url+'>'+archieves[i].title+'</a></li></ol>';
+			}
+			finalStr+='</div></div></div>';
+			var toRemove=document.getElementById("js-to-remove");
+			toRemove.parentNode.removeChild(toRemove);
+			document.write(finalStr);
+
+		}
+		
+
+</script>
+	<!--<div class="row">
+		<div class="col-md-3">
+			<div class="sidebar hidden-print" role="complementary">
+				<div id="navigation">
+					<h1>目录</h1>
+					<ul class="nav sidenav">
+						{% if site.tags.first[0] == null %} {% for tag in site.tags %}
+						<li><a href="{{ site.JB.tags_path }}#{{ tag }}-ref">{{ tag }} <span >({{ site.tags[tag].size }})</span></a></li>
+						{% endfor %} {% else %} {% for tag in site.tags %}
+						<li><a href="{{ site.JB.tags_path }}#{{ tag[0] }}-ref">{{ tag[0] }} <span style="color: #999999;" >({{ tag[1].size }})</span></a></li>
+						{% endfor %} {% endif %}
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-9" role="main">
+			<div class="panel docs-content">
+				<div class="wrapper">
+					<div class="home">
+
+						{% for tag in site.tags %}
+						<h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>
+						<ul>
+							{% assign pages_list = tag[1] %} {% include LessOrMore/pages_list %}
+						</ul>
+						{% endfor %}
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>-->
 </div>

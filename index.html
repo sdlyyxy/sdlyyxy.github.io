@@ -68,11 +68,8 @@ layout: default
                     <span class="index-post-date">
                       <a class="yxy-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.date | date: "%Y年%m月%d日" }}</a> 
                       /
-                      {% for cat_item in post.categories %}
-                      {{ cat_item }}
-                      {% endfor %}
                       {% for tag_item in post.tag %}
-                      {{ tag_item }}
+                      <a class="yxy-link" href="{{ site.baseurl | append: '/tag/?tags=' | append: tag_item }}">{{ tag_item }}</a> 
                       {% endfor %}
                     </span> 
                     </li>
