@@ -69,7 +69,7 @@ layout: default
                       <a class="yxy-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.date | date: "%Y年%m月%d日" }}</a> 
                       /
                       {% for tag_item in post.tag %}
-                      <a class="yxy-link" href="{{ site.baseurl | append: '/tag/?tags=' | append: tag_item }}">{{ tag_item }}</a> 
+                      <a class="yxy-link" href="{{ site.baseurl | append: '/tag/' | append: tag_item }}">{{ tag_item }}</a> 
                       {% endfor %}
                     </span> 
                     </li>
