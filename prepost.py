@@ -9,7 +9,7 @@ tagSet = set()
 
 
 def check(filename):
-    print(filename)
+    # print(filename)
     f = open(filename,encoding="utf8")
     s = ''
     time = 0
@@ -29,13 +29,36 @@ def check(filename):
         time = time + 1
         for j in i['tag']:
             tagSet.add(j)
-    # for i in tagSet:
-        # print(i)
+
+def create(tagName):
+    os.makedirs('./tag/'+tagName)
+    f=open('./tag/'+tagName+'/index.html','w',encoding='utf8')
+    print(
+        '''
+        <div class="container docs-container" id="js-to-remove">
+	<div class="panel docs-content">
+		<div class="wrapper">
+			<div class="home">
+
+				{% for tag in site.tags %}
+                {% if tag=='''+tagName+
+    ''' %}
+				<h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>
+				<ul>
+					{% assign pages_list = tag[1] %} {% include LessOrMore/pages_list %}
+				</ul>
+				{% endfor %}
+
+			</div>
+		</div>
+	</div>
+    '''
+    ,f)
 
 
 for root, dirs, files in os.walk('./_posts'):
     for filename in files:
         check(os.path.join(root, filename))
-f=open("out.txt","w",encoding="utf8")
 for i in tagSet:
-    print(i,file=f)
+    if not os.path.isfile('./tag/'+i+'/index.html'):
+        create(i)
