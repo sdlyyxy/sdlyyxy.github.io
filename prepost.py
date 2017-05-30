@@ -31,18 +31,24 @@ def check(filename):
             tagSet.add(j)
 
 def create(tagName):
-    os.makedirs('./tag/'+tagName)
+    if not os.path.exists('./tag/'+tagName):
+        os.makedirs('./tag/'+tagName)
     f=open('./tag/'+tagName+'/index.html','w',encoding='utf8')
     print(
         '''
+--- 
+layout: default 
+title: 标签分类 
+header: Posts By Tag 
+---
         <div class="container docs-container" id="js-to-remove">
 	<div class="panel docs-content">
 		<div class="wrapper">
 			<div class="home">
 
 				{% for tag in site.tags %}
-                {% if tag=='''+tagName+
-    ''' %}
+                {% if tag==\''''+tagName+
+    '''\'%}
 				<h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>
 				<ul>
 					{% assign pages_list = tag[1] %} {% include LessOrMore/pages_list %}
@@ -52,13 +58,14 @@ def create(tagName):
 			</div>
 		</div>
 	</div>
+    </div>
     '''
-    ,f)
+    ,file=f)
 
 
 for root, dirs, files in os.walk('./_posts'):
     for filename in files:
         check(os.path.join(root, filename))
 for i in tagSet:
-    if not os.path.isfile('./tag/'+i+'/index.html'):
-        create(i)
+    # if not os.path.isfile('./tag/'+i+'/index.html'):
+    create(i)
