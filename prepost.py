@@ -53,6 +53,7 @@ header: Posts By Tag
 				<ul>
 					{% assign pages_list = tag[1] %} {% include LessOrMore/pages_list %}
 				</ul>
+                {% endif %}
 				{% endfor %}
 
 			</div>
