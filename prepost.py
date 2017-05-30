@@ -35,12 +35,12 @@ def create(tagName):
         os.makedirs('./tag/'+tagName)
     f=open('./tag/'+tagName+'/index.html','w',encoding='utf8')
     print(
-        '''
---- 
+        '''--- 
 layout: default 
 title: 标签分类 
 header: Posts By Tag 
 ---
+
         <div class="container docs-container" id="js-to-remove">
 	<div class="panel docs-content">
 		<div class="wrapper">
