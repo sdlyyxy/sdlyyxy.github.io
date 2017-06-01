@@ -1,7 +1,6 @@
 ---
 layout: post
 title: 神犇们的博客们
-permalink: /reference/
 ---
 
 * content

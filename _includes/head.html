@@ -2,14 +2,10 @@
 	<meta charset="utf-8">
 	<!--IE=EDGE？-->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>
-		{% if page.title %}
-		{{ page.title | append: ' | ' |append: site.name }}
-		{% else %}
-		{{ site.name }}
-		{% endif %}
+		{% if page.title %} {{ page.title | append: ' | ' |append: site.name }} {% else %} {{ site.name }} {% endif %}
 	</title>
 
 	<link rel="shortcut icon" href="{{ '/styles/images/favicon.jpg' | prepend: site.baseurl }}">
@@ -27,12 +23,16 @@
 
 	<!--rss?-->
 	<link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ '/feed.xml' | prepend: site.baseurl }}">
-	
+
 	<meta name="keywords" content="{{ page.title | append: ', ' | append: site.name | append: ', ' | append: site.meta_description}}">
 	<meta name="description" content="{{site.meta_description}}">
 
 	<!--<script src="{{ '/styles/js/jquery.min.js' | prepend: site.baseurl }}"></script>-->
 	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({ tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]} });
+	</script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML-full"></script>
 
 
 	<!--[if lt IE 9]>
@@ -41,7 +41,7 @@
 
 
 	<!--baidu_analysis-->
-  	<!--<script>
+	<!--<script>
 		var _hmt = _hmt || [];
 		(function() {
 		  var hm = document.createElement("script");
@@ -50,9 +50,9 @@
 		  s.parentNode.insertBefore(hm, s);
 		})();
 	</script>-->
-  	<style type="text/css">
-	  	.docs-content{
-	  		margin-bottom: 10px;
-	  	}
-  	</style>
+	<style type="text/css">
+		.docs-content {
+			margin-bottom: 10px;
+		}
+	</style>
 </head>
