@@ -2,8 +2,7 @@
 layout: post
 title:  Hello World
 date:   2017-05-18 18:20:00 +0800
-categories: document
-tag: [others]
+tag: [杂]
 ---
 
 国内空间、域名的备案真是太复杂、麻烦了。。转投GitHub pages。

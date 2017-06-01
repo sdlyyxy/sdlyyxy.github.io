@@ -20,10 +20,14 @@
           <a href="{{ '/' | prepend: site.baseurl }}">主页</a>
         </li>
         <li>
-          <a href="{{ '/categories/' | prepend: site.baseurl }}">文章分类</a>
+          <!--<a href="{{ '/categories/' | prepend: site.baseurl }}">文章分类</a>-->
         </li>
         <li>
-          <a href="{{ '/tag' | prepend: site.baseurl }}">标签</a>
+          <a href="{{ '/tag' | prepend: site.baseurl }}">文章标签</a>
+        </li>
+
+        <li>
+          <a href="{{ '/feed.xml' | prepend: site.baseurl }}">RSS订阅</a>
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -34,16 +38,19 @@
           <a href="{{ '/donate/' | prepend: site.baseurl }}"><strong>打赏</strong></a>
         </li>-->
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">关于<b class="caret"></b></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">更多<b class="caret"></b></a>
           <ul class="dropdown-menu">
             <!--<li><a rel="nofollow" target="_blank" href="{{site.github}}">Github</a></li>-->
             <!--<li><a rel="nofollow" target="_blank" href="{{site.resume_site}}">关于作者</a></li>-->
             <li><a rel="nofollow" target="_blank" href="mailto:sdlyyxy@icloud.com">联系作者</a></li>
+            <li>
+              <a href="{{ '/reference' | prepend: site.baseurl }}">神犇之家</a>
+            </li>
             <li><a rel="nofollow" href="{{ '/books' | prepend: site.baseurl }}">我的书单</a></li>
-            <li><a rel="nofollow" href="{{ '/reference' | prepend: site.baseurl }}">神犇博客</a></li>
-            <li><a href="{{ '/feed.xml' | prepend: site.baseurl }}">RSS订阅</a></li>
-            <li class="divider"></li>
-            <li><a rel="nofollow" target="_blank" href="https://github.com/sdlyyxy/sdlyyxy.github.io">GitHub</a></li>
+
+
+            <!--<li class="divider"></li>-->
+            <!--<li><a rel="nofollow" target="_blank" href="https://github.com/sdlyyxy/sdlyyxy.github.io">GitHub</a></li>-->
           </ul>
         </li>
       </ul>

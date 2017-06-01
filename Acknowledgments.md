@@ -1,3 +1,10 @@
+---
+layout: post
+title: 感谢
+---
+
+`LessOrMore`
+
 MIT License
 
 Copyright (c) 2016 Freud, Kang
