@@ -1,15 +1,19 @@
 ---
 layout: post
-title: 神犇们的博客们
+title: 神犇之家
 ---
 
 * content
 {:toc}
 
+## 王小愣24
+***
+[王小愣24的微信公众号](/pages/wangxiaoleng)，体育·生活。
+
 
 ## Matrix67
 ***
-[Matrix67: The Aha Moments](http://www.matrix67.com/blog/)，PKU中文系
+[Matrix67: The Aha Moments](http://www.matrix67.com/blog/)，著名PKU中文系学生
 
 ## BYVoid
 ***
@@ -17,5 +21,5 @@ title: 神犇们的博客们
 
 ## hzwer
 ***
-[hzwer](http://hzwer.com/)，著名的OIer，黄学长
+[hzwer](http://hzwer.com/)，著名OIer，黄学长
 
