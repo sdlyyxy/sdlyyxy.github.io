@@ -12,7 +12,7 @@
     font-size: 16px;
 }
 .index-post-item {
-    font-size: 18px;
+    font-size: 19px;
     color: black;
 }
 a.yxy-link:hover,a.yxy-link:focus,a.yxy-link:active{
@@ -24,8 +24,8 @@ a.index-post-item:hover,a.index-post-item:focus,a.index-post-item:active{
     text-decoration: none;
 }
 .index-post-date a,.index-post-date{
-    font-size: 13px;
-    color: #989898;
+    font-size: 14px;
+    color: #C8C8C8;
 }
 .docs-header .container{
     text-align: left;
