@@ -30,3 +30,10 @@ a.index-post-item:hover,a.index-post-item:focus,a.index-post-item:active{
 .docs-header .container{
     text-align: left;
 }
+.latest-article{
+    margin-left: 10px;
+    border-left: 4px solid #29abe2;
+    color: #999;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
