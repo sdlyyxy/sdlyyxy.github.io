@@ -38,6 +38,7 @@ a.index-post-item:hover,a.index-post-item:focus,a.index-post-item:active{
     margin-bottom: 10px;
 }
 pre{
+    word-wrap: normal;
     overflow-x: auto;
 }
 .highlighter-rouge pre code {
