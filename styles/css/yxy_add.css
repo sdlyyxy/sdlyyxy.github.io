@@ -37,3 +37,18 @@ a.index-post-item:hover,a.index-post-item:focus,a.index-post-item:active{
     font-size: 19px;
     margin-bottom: 10px;
 }
+pre{
+    overflow-x: auto;
+}
+.highlighter-rouge pre code {
+    white-space: pre;
+}
+code.highlighter-rouge{
+    white-space: pre-line;
+}
+code.language-pascal{
+    white-space: pre;
+}
+img {
+    max-width: 100%;
+}
