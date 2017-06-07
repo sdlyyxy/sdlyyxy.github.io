@@ -10,6 +10,8 @@ description: 思考改变世界。
 meta_description: sdlyyxy # used in html's head , meta, description 
 motto: 思考改变世界。
 banner: 思考改变世界。
+language: zh-Hans
+timezone: Asia/Shanghai
 
 #permalink: /:categories/:year/:month/:day/:title/
 permalink: /:year/:month/:day/:title/
