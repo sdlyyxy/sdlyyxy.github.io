@@ -56,30 +56,21 @@ img {
 }
 div.div404 {
     width: 90%;
-    height: 50%;
+    height: 100%;
     /*overflow: auto;*/
     margin: auto;
     position: absolute;
-    top: 50%;
+    top:0%;
     left: 0;
     bottom: 0;
     right: 0;
+    padding-top: 20px;
 }
 h2.in404{
-    color: #ebf3e9;
+    color: black;
     text-align: center;
-    top: 33%;
+    /*top: 33%;*/
     font-size: 23px;
     font-family: Courier New, Courier, monospace;
-    padding-top: 300px;
-}
-@media (min-width:900px){
-    h2.in404{
-        padding-top:350px;
-    }
-}
-@media (min-width:1150px){
-    h2.in404{
-        padding-top:400px;
-    }
+    padding-top: 0px;
 }
