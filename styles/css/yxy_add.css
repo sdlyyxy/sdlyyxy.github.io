@@ -71,6 +71,14 @@ h2.in404{
     text-align: center;
     /*top: 33%;*/
     font-size: 23px;
-    font-family: Courier New, Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
     padding-top: 0px;
+}
+.rss{
+    border-top: 1px solid #eee;
+    text-align: center;
+    margin-bottom: 1em;
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    line-height: 1.6;
+    font-size: 62.5%;
 }
