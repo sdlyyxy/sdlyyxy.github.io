@@ -3,10 +3,18 @@
 		{% if page.title %}
 		
 		    <h2>{{ page.title }}</h2>
+			<span style="font-weight:300">
 		    {% if page.date %}
 				<!--<span class="postdate">{{ page.date | date: "%b %d, %Y" }}</span>-->
 				<span class="postdate">{{ page.date | date: "%Y年%m月%d日" }}</span>
 			{% endif %}
+			{% if page.tag %}
+				<span>|
+				{% for tag_item in page.tag %}
+            	<a class="header-link" href="{{ site.baseurl | append: '/tag/' | append: tag_item }}">{{tag_item}}</a>{% if forloop.last %}{% else %},{% endif %}{% endfor %}
+				</span>
+			{% endif %}
+			</span>
 		<!--<h1>{{ site.motto }}</h1>-->
 		{% else %}
 		<div>

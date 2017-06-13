@@ -54,13 +54,13 @@ layout: default
                   <span class="latest-article">&nbsp;&nbsp;&nbsp;最近文章</span>
                 </div>
                 {% endif %}
-                <hr>
+                <!--<hr>-->
                 {% for post in paginator.posts  %}
                   {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
                   {% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
                   {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
                   {% capture next_month %}{{ post.previous.date | date: "%B" }}{% endcapture %}
-
+                  <hr>
                   {% if forloop.first %}
                     <div id="year_{{this_year}}"></div>
                     <!--<h1 id="year_{{this_year}}">{{this_year}}</h1>-->
@@ -80,12 +80,11 @@ layout: default
                       <a class="yxy-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.date | date: "%Y年%m月%d日" }}</a> 
                       /
                       {% for tag_item in post.tag %}
-                      <a class="yxy-link" href="{{ site.baseurl | append: '/tag/' | append: tag_item }}">{{ tag_item | prepend: ' ' }}</a> 
-                      {% endfor %}
+                      <a class="yxy-link" href="{{ site.baseurl | append: '/tag/' | append: tag_item }}">{{tag_item}}</a>{% if forloop.last %}{% else %},{% endif %}{% endfor %}
                     </span> 
                     </li>
                   </ol>
-                  <hr>
+                  <!--<hr>-->
 
                   {% if forloop.last %}
                     </ul>
@@ -112,6 +111,13 @@ layout: default
                   {% endif %}
 
                 {% endfor %}
+
+              <br>
+              <div class="rss" >
+                <a href="{{ '/pages/feed.xml' | prepend: site.baseurl }}" target="_blank">
+                <i class="fa fa-rss fa-2x"></i>
+                </a>
+              </div>
 
                 {% if paginator.previous_page %}
                 <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">上一页</a>

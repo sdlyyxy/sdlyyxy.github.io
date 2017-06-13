@@ -9,7 +9,7 @@
     }
 }
 .post-content {
-    font-size: 16px;
+    font-size: 17px;
 }
 .index-post-item {
     font-size: 19px;
@@ -74,11 +74,30 @@ h2.in404{
     font-family: 'Courier New', Courier, monospace;
     padding-top: 0px;
 }
-.rss{
+div.rss{
     border-top: 1px solid #eee;
     text-align: center;
     margin-bottom: 1em;
     font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
     line-height: 1.6;
     font-size: 62.5%;
+}
+.rss a{
+    position: relative;
+    top: -0.8em;
+    background: #fff;
+    color: #c8c8c8;
+    padding: 0 15px;
+    display:inline;
+    text-decoration: none;
+    text-align: center;
+}
+.rss a:hover{
+    color:#ffb648;
+}
+.header-link{
+    color: #b9c8e0;
+}
+.MathJax_Display{
+    overflow-x: auto;
 }
