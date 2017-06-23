@@ -1,0 +1,18 @@
+---
+layout: post
+title: fortune
+---
+
+<p id="fortune-item" style="white-space:pre-line;"></p>
+<p id="whoes" style="text-align:right;"></p>
+<script>
+    // alert("1");
+    $.get("http://123.206.93.234/app/fortune/get.php", function (data, status) {
+        // alert("jeh");
+        var obj =document.getElementById("fortune-item");
+
+        obj.innerHTML=data.split('--')[0];
+        if(data.split('--')[1])
+            document.getElementById("whoes").innerHTML='--'+data.split('--')[1];
+    });
+</script>
