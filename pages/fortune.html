@@ -3,16 +3,26 @@ layout: post
 title: fortune
 ---
 
-<p id="fortune-item" style="white-space:pre-line;"></p>
+<p id="fortune-item" style="white-space:pre-line;text-align:center;"></p>
 <p id="whoes" style="text-align:right;"></p>
 <script>
     // alert("1");
     $.get("https://www.sdlyyxy.cn/app/fortune/get.php", function (data, status) {
         // alert("jeh");
         var obj =document.getElementById("fortune-item");
-
-        obj.innerHTML=data.split('--')[0];
-        if(data.split('--')[1])
-            document.getElementById("whoes").innerHTML='--'+data.split('--')[1];
+		//if(data.match(/\[32m/)!=-1)obj.style.textAlign='center';
+		data=data.replace(/\[32m/,'');
+		data=data.replace(/\[33m/,'');
+		data=data.replace(/\[m/g,'');
+        obj.innerHTML=data.split('- ')[0];
+        if(data.split('- ')[1])
+            document.getElementById("whoes").innerHTML='－－'+data.split('- ')[1];
     });
 </script>
+<hr>
+<br>
+<blockquote>
+<p>运行于 ubuntu 上的 <a href="https://en.wikipedia.org/wiki/Fortune_%28Unix%29">fortune</a>，发现毛包的句子欢迎<a href="mailto:sdlyyxy@icloud.com">联系作者</a>～
+</p>
+</blockquote>
+
