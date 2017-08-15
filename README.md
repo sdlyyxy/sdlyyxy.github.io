@@ -2,4 +2,4 @@
 
 My blog hosted on github.io
 
-[jekyll模版说明](./_pages/Usage.md)
+[jekyll模版说明](./pages/Usage.md)
