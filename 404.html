@@ -3,27 +3,38 @@ permalink: /404.html
 title: 404 Not Found 
 --- 
 
-{% include head.html %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <style>
+            body {
+                -webkit-user-select: none;
+                -webkit-text-size-adjust: none;
+                font: -apple-system-short-body;
+                color: rgb(125, 127, 127);
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                
+            }
 
+            p {
+                text-align:center;
+                word-wrap: break-word;
+                margin: 123px 50px 0 50px;
+            }
 
-
-<body>
-    <!--background image on different devices are confusing.....I'll try later.-->
-
-    <div class="div404">
-        <span style="font-size:30px;">404 Not Found<span>
-        <h2 class="in404">
-            
-            <br>
-            This is not the page you are looking for.
-            <br>
-            <br>
-            <a  style="color:black" href="/">Go Home</a>
-            /
-            <a style="color:black" href="mailto:sdlyyxy@icloud.com">Contact sdlyyxy</a>
-        </h2>
-        
-    </div>
-</body>
-
+            a {
+                font-weight: bold;
+                color: inherit;
+            }
+        </style>
+        <title>404 Not Found</title>
+    </head>
+    <body class="iphone">
+        <p>Safari&nbsp;打不开网页，因为服务器找不到您请求的资源。</p>
+    </body>
 </html>
