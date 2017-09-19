@@ -6,5 +6,5 @@ addons:
             - gem
 script:
 #    - sudo apt install jekyll
-    - sudo gem install jekyll
+    - gem install jekyll
     - jekyll build
