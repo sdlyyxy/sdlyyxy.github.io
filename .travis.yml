@@ -1,0 +1,4 @@
+sudo: enabled
+script:
+    - sudo apt install jekyll
+    - jekyll build
