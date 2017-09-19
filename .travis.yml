@@ -2,7 +2,9 @@ sudo: enabled
 addons:
     apt:
         packages:
-            - jekyll
+            - ruby
+            - gem
 script:
 #    - sudo apt install jekyll
+    - sudo gem install jekyll
     - jekyll build
