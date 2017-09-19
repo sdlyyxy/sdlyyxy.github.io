@@ -6,5 +6,5 @@ addons:
             - gem
 script:
 #    - sudo apt install jekyll
-    - gem install jekyll
+    - gem install jekyll jekyll-paginate
     - jekyll build
