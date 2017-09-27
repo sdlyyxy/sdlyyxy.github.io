@@ -54,6 +54,10 @@ code.language-pascal{
 img {
     max-width: 100%;
 }
+.post-content img{
+    display: block;
+    margin:0 auto;
+}
 div.div404 {
     width: 90%;
     height: 100%;
