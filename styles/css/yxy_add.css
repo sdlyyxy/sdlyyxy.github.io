@@ -58,6 +58,9 @@ img {
     display: block;
     margin:0 auto;
 }
+.post-content hr{
+    border-top: 0.3em solid #eeeeee;
+}
 div.div404 {
     width: 90%;
     height: 100%;

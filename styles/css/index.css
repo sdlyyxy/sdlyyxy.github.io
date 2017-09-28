@@ -486,14 +486,15 @@ abbr.initialism {
   text-transform: uppercase;
 }
 blockquote {
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
+  padding: 0 1em;
   margin: 0 0 20px;
   border-left: 4px solid #eeeeee;
 }
 blockquote p {
   color: #7a7a7a;
   font-weight: 300;
-  line-height: 1.25;
+  line-height: 1.50;
 }
 blockquote p:last-child {
   margin-bottom: 0;
