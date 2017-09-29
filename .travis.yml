@@ -4,7 +4,10 @@ addons:
         packages:
             - ruby
             - gem
+            - bundle
 script:
 #    - sudo apt install jekyll
-    - gem install jekyll jekyll-paginate
-    - jekyll build
+    # - gem install jekyll jekyll-paginate
+    # - jekyll build
+    - bundle update
+    - bundle exec jekyll build
