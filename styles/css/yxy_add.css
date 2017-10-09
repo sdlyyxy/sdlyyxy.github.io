@@ -108,3 +108,6 @@ div.rss{
 .MathJax_Display{
     overflow-x: auto;
 }
+.post-content{
+    padding-top: 25px;
+}
