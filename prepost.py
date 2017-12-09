@@ -10,14 +10,15 @@ tagSet = set()
 
 def check(filename):
     # print(filename)
-    f = open(filename,encoding="utf8")
+    f = open(filename, encoding="utf8")
     s = ''
     time = 0
     while(True):
         tmp = f.readline()
         # print(tmp)
-        if tmp[0] == '-':
-            time = time + 1
+        if len(tmp) > 0:
+            if tmp[0] == '-':
+                time = time + 1
         s = s + tmp
         if time == 2:
             break
@@ -30,10 +31,11 @@ def check(filename):
         for j in i['tag']:
             tagSet.add(j)
 
+
 def create(tagName):
-    if not os.path.exists('./tag/'+tagName):
-        os.makedirs('./tag/'+tagName)
-    f=open('./tag/'+tagName+'/index.html','w',encoding='utf8')
+    if not os.path.exists('./tag/' + tagName):
+        os.makedirs('./tag/' + tagName)
+    f = open('./tag/' + tagName + '/index.html', 'w', encoding='utf8')
     print(
         '''---
 layout: default
@@ -47,8 +49,8 @@ header: Posts By Tag
 			<div class="home">
 
 				{% for tag in site.tags %}
-                {% if tag[0] contains \''''+tagName+
-    '''\'%}
+                {% if tag[0] contains \'''' + tagName +
+        '''\'%}
 				<h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>
 				<ul>
 					{% assign pages_list = tag[1] %} {% include LessOrMore/pages_list %}
@@ -60,8 +62,7 @@ header: Posts By Tag
 		</div>
 	</div>
     </div>
-    '''
-    ,file=f)
+    ''', file=f)
 
 
 for root, dirs, files in os.walk('./_posts'):

@@ -14,12 +14,13 @@ language: zh-Hans
 timezone: Asia/Shanghai
 
 #permalink: /:categories/:year/:month/:day/:title/
+url: "http://blog.sdlyyxy.com/"
 permalink: /:year/:month/:day/:title/
 plugins: 
     - jekyll-paginate
-    - jekyll-sitemap
     - jekyll-feed
-    - jekyll-github-metadata
+#    - jekyll-github-metadata
+    - jekyll-sitemap
 paginate: 10
 
 feed:
