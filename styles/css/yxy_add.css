@@ -1,0 +1,113 @@
+@media (max-width:480px){
+    .docs-header h2 {
+        color: white;
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+    .docs-header .container{
+        padding-bottom: 10px;
+    }
+}
+.post-content {
+    font-size: 17px;
+}
+.index-post-item {
+    font-size: 19px;
+    color: black;
+}
+a.yxy-link:hover,a.yxy-link:focus,a.yxy-link:active{
+    color: #0075c9;
+    text-decoration: none;
+}
+a.index-post-item:hover,a.index-post-item:focus,a.index-post-item:active{
+    color: #0075c9;
+    text-decoration: none;
+}
+.index-post-date a,.index-post-date{
+    font-size: 14px;
+    color: #C8C8C8;
+}
+.docs-header .container{
+    text-align: left;
+}
+.latest-article{
+    margin-left: 10px;
+    border-left: 4px solid #29abe2;
+    color: #999;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+pre{
+    word-wrap: normal;
+    overflow-x: auto;
+}
+.highlighter-rouge pre code {
+    white-space: pre;
+}
+code.highlighter-rouge{
+    white-space: pre-line;
+    /*white-space: pre;*/
+}
+code.language-pascal{
+    white-space: pre;
+}
+img {
+    max-width: 100%;
+}
+.post-content img{
+    display: block;
+    margin:0 auto;
+}
+.post-content hr{
+    border-top: 0.3em solid #eeeeee;
+}
+div.div404 {
+    width: 90%;
+    height: 100%;
+    /*overflow: auto;*/
+    margin: auto;
+    position: absolute;
+    top:0%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding-top: 20px;
+}
+h2.in404{
+    color: black;
+    text-align: center;
+    /*top: 33%;*/
+    font-size: 23px;
+    font-family: 'Courier New', Courier, monospace;
+    padding-top: 0px;
+}
+div.rss{
+    border-top: 1px solid #eee;
+    text-align: center;
+    margin-bottom: 1em;
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    line-height: 1.6;
+    font-size: 62.5%;
+}
+.rss a{
+    position: relative;
+    top: -0.8em;
+    background: #fff;
+    color: #c8c8c8;
+    padding: 0 15px;
+    display:inline;
+    text-decoration: none;
+    text-align: center;
+}
+.rss a:hover{
+    color:#ffb648;
+}
+.header-link{
+    color: #b9c8e0;
+}
+.MathJax_Display{
+    overflow-x: auto;
+}
+.post-content{
+    padding-top: 25px;
+}

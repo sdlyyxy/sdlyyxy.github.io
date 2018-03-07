@@ -1,0 +1,14 @@
+sudo: enabled
+addons:
+    apt:
+        packages:
+            - ruby
+            - gem
+            # - bundle
+script:
+#    - sudo apt install jekyll
+    # - gem install jekyll jekyll-paginate
+    # - jekyll build
+    - gem install bundle --pre
+    - bundle install
+    - bundle exec jekyll build
