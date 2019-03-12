@@ -22,4 +22,4 @@ tag: [杂]
 
 [@washingtonpost](https://www.washingtonpost.com/world/2019/02/27/how-much-do-chinese-people-love-huawei-just-ask-these-cute-singing-children/?utm_term=.9b1045c3a076)
 
-[@txrjy](www.txrjy.com/thread-1062356-1-1.html)
+[@txrjy](http://www.txrjy.com/thread-1062356-1-1.html)
