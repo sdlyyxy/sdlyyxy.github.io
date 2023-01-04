@@ -22,6 +22,8 @@ if ver[0] == '2':
     postTags = raw_input("Please input the tags of this article:")
 else:
     postTags = input("Please input the tags of this article:")
+if postTags=="":
+    postTags="杂"
 output += 'tag: [' + postTags + ']\n'
 output += '---\n\n'
 f = open(fileName, encoding="utf8")
