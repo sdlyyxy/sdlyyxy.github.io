@@ -1,0 +1,65 @@
+---
+layout: post
+title: 除夕Greg Kroah-Hartman来信
+date: 2023-01-21 23:22:50 +0800
+tag: [linux]
+---
+
+```
+Date: Sat, 21 Jan 2023 10:15:45 +0100
+From: Greg KH <greg@kroah.com>
+To: sdlyyxy@bupt.edu.cn
+Subject: Linux kernel development reports for the 6.0 release
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+
+Hi,
+
+I'm trying to keep track of the different companies that people are
+working for, or if people are just doing this as a hobby, or being paid
+as a consultant for future articles on lwn.net about who is doing the
+work on the Linux kernel.
+
+Jonathan Corbet has also been writing articles at lwn.net about this
+topic, and we share the same set of scripts, as well as we write a
+yearly article for the Linux Foundation about Linux kernel
+contributions.  An example of this can be found at:
+	https://www.linuxfoundation.org/2017-linux-kernel-report-landing-page/
+
+Your email address shows up in the changelog for the 6.0 kernel release
+as a contributor, but I can't seem to place it with a company.  If you
+don't mind, could you let me know what company you work for?  Or if no
+company, do you want to be classified in any of these other categories
+instead:
+	- Amateur/Hobbyist/Unaffiliated/None
+	  - this category is for people who are doing kernel work, but
+	    not getting paid by any corporation to do it.
+	- Consultant
+	  - this category is for people who are consultants working on
+	    the kernel and getting paid by other companies (not your
+	    own) to do the work
+	- Academia
+	  - this category is for people working for Universities and
+	    doing kernel work as part of their research or other
+	    responsibilities related to school work.
+	- Unknown
+	  - this category is for people who want to remain in the
+	    "unknown" category.
+
+If you want, this mapping will be kept private and only myself and Jon
+Corbet (of lwn.net) will have access to it.
+
+The scripts involved in this can be found at:
+	https://github.com/gregkh/kernel-history
+if you are curious.
+
+If you have any questions about this, please let me know.
+
+If you never want me to bother you with this again, just let me know and
+I will be glad to take you off of my list.
+
+Thank you for your time,
+
+greg k-h
+```
