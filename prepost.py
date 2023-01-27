@@ -22,7 +22,7 @@ def check(filename):
         s = s + tmp
         if time == 2:
             break
-    data = yaml.load_all(s)
+    data = yaml.load_all(s, Loader=yaml.SafeLoader)
     time = 0
     for i in data:
         if time >= 1:
