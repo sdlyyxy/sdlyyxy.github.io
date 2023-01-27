@@ -6340,6 +6340,7 @@ hr {
 }
 .docs-header h1 {
   /*margin-bottom: 30px;*/
+  font-family: system-ui;
   color: #fff;
 }
 .docs-header h2 {
