@@ -111,3 +111,52 @@ div.rss{
 .post-content{
     padding-top: 25px;
 }
+:root{
+    color-scheme: light dark
+}
+.breadcrumb{
+    background-color: #fff;
+}
+@media (prefers-color-scheme: dark) {
+    .docs-content {
+        background-color: #000000;
+    }
+    body{
+        background-color:#000000;
+        color:#fff;
+    }
+    .footer{
+        background-color: #000000;
+    }
+    .rss a{
+        background-color: #000000;
+    }
+    .post-content hr{
+        border-top: 0.3em solid #444;
+        /* 注意solid！没有solid，则暗色模式下不显示 */
+    }
+    blockquote{
+        border-left: 4px solid #444;
+    }
+    home{
+        background-color: #000;
+    }
+    .navbar-header{
+        background-color: #000;
+    }
+    .sidenav{
+        background-color: #000;
+    }
+    .docs-header{
+        background-color: #000;
+    }
+    .docs-nav{
+        background-color: #000;
+    }
+    .breadcrumb{
+        background-color: #000;
+    }
+    .index-post-item {
+        color:#fff;
+    }
+}

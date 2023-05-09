@@ -5828,6 +5828,14 @@ body {
   color: #333;
   /* Effectively the base text color */
 }
+@media (prefers-color-scheme: dark) {
+  .highlight pre code {
+    font-size: inherit;
+    color: #d0d0d0;
+    /* 参见syntex.css https://pages-themes.github.io/hacker/assets/css/style.css */
+    /* 我不明白为什么syntex.css明明在index.css之后，但这里index.css的设置覆盖了syntex.css */
+  }
+}
 .highlight pre .lineno {
   display: inline-block;
   width: 22px;
