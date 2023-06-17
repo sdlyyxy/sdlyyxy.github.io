@@ -160,3 +160,6 @@ div.rss{
         color:#fff;
     }
 }
+article{
+    font-family: system-ui, "Open Sans", "Helvetica Neue", Helvetica, Arial, 'Microsoft YaHei', sans-serif;
+}
